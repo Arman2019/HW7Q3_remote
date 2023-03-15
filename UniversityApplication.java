@@ -39,6 +39,34 @@ public class UniversityApplication {
 
         // add student to course
         physics2.addStudent(rezaMohammadi);
+		
+		// print out which students are in which courses and which professor has which students
+        System.out.println(math1.getName() + " students: ");
+        for (Student student : math1.getStudents()) {
+            if (student != null) {
+                System.out.println(student.getName());
+            }
+        }
+        System.out.println("Mathematics 1 professor: " + math1.getProfessor().getName());
+
+        System.out.println(math2.getName() + " students: ");
+        for (Student student : math2.getStudents()) {
+            if (student != null) {
+                System.out.println(student.getName());
+            }
+        }
+        System.out.println("Mathematics 2 professor: " + math2.getProfessor().getName());
+
+        System.out.println(physics2.getName() + " students: ");
+        for (Student student : physics2.getStudents()) {
+            if (student != null) {
+                System.out.println(student.getName());
+            }
+        }
+        System.out.println("Physics 2 professor: " + physics2.getProfessor().getName());
+
+        // print out Reza Mohammadi's grade in Mathematics 1
+        System.out.println(rezaMohammadi.getName() + "'s grade in " + math1.getName() + ": " + rezaMohammadi.getGrades()[0]);
     }
 
 
